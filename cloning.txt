@@ -1,0 +1,76 @@
+HOW TO CLONE A REPO AND PUSH INTO YOUR OWN GITHUB REPO
+======================================================
+
+CASE 1 — Start from someone else’s repo (e.g., lecturer repo)
+-------------------------------------------------------------
+
+1. Create your own EMPTY repo on GitHub
+   - Click + → New repository
+   - Name it: LabTest
+   - Do NOT add README, .gitignore, or license
+   - Copy your repo URL:
+     https://github.com/computeroverride/LabTest.git
+
+2. Clone the lecturer's repo to your computer
+   cd C:\Local_Git_Repository
+   git clone https://github.com/marjanaak/Sample-Lab1.git
+   cd Sample-Lab1
+
+3. Change the remote to point to YOUR GitHub repo
+   git remote -v      ← shows old origin (lecturer repo)
+   git remote set-url origin https://github.com/computeroverride/LabTest.git
+   git remote -v      ← now shows your repo
+
+4. Make your changes
+   git add .
+   git commit -m "Your commit message"
+
+5. Push to your GitHub repo
+   git push --set-upstream origin main
+
+   If the GitHub repo already has commits and you want to overwrite them:
+   git push --force origin main
+
+
+CASE 2 — Start from your own local folder (fresh project)
+----------------------------------------------------------
+
+1. Create a local Git repo
+   cd C:\Local_Git_Repository\LabTest
+   git init
+   git add .
+   git commit -m "Initial commit"
+
+2. Create an empty GitHub repo named LabTest
+   Copy its URL:
+   https://github.com/computeroverride/LabTest.git
+
+3. Connect your local repo to GitHub and push
+   git remote add origin https://github.com/computeroverride/LabTest.git
+   git branch -M main
+   git push --set-upstream origin main
+
+
+IMPORTANT TIPS
+--------------
+
+1. When your prompt shows:
+   C:\Local_Git_Repository\LabTest>
+   TYPE ONLY THE GIT COMMAND:
+   git status
+   git remote -v
+   git push
+
+   Do NOT include the prompt in the command.
+
+2. To see where your repo is pointing:
+   git remote -v
+
+3. To change the remote if you linked the wrong one:
+   git remote set-url origin <your-github-url>
+
+4. First push always needs:
+   git push --set-upstream origin main
+
+5. If GitHub has files but your local repo should replace them:
+   git push --force origin main

@@ -1,0 +1,164 @@
+ET0735 – GIT CHEAT SHEET
+=========================
+
+BASIC SETUP
+-----------
+Set global username:
+    git config --global user.name "<your name>"
+
+Set global email:
+    git config --global user.email <your email>
+
+Verify current settings:
+    git config --list
+
+
+CREATE & MANAGE LOCAL REPOSITORIES
+----------------------------------
+Create a new folder:
+    mkdir <foldername>
+
+Enter the folder:
+    cd <foldername>
+
+Initialize a Git repository:
+    git init
+
+
+CHECK REPOSITORY STATUS
+-----------------------
+Show untracked/modified files:
+    git status
+
+Compare file changes:
+    git diff
+
+
+STAGING & COMMITTING
+--------------------
+Stage a specific file:
+    git add <filename>
+
+Stage ALL files:
+    git add .
+
+Commit staged changes:
+    git commit -m "<commit message>"
+
+
+BRANCHING
+---------
+List branches:
+    git branch
+
+Create a new branch:
+    git branch <branchname>
+
+Switch to a branch:
+    git checkout <branchname>
+
+Create + switch:
+    git checkout -b <branchname>
+
+Merge a branch into current:
+    git merge <branchname>
+
+
+REMOTE REPOSITORIES (GITHUB)
+----------------------------
+Add a remote repository:
+    git remote add origin <URL>
+
+Check remote configuration:
+    git remote -v
+
+Change the remote origin:
+    git remote set-url origin <URL>
+
+
+PUSHING & PULLING
+-----------------
+First push (sets upstream):
+    git push --set-upstream origin main
+
+Subsequent pushes:
+    git push
+
+Pull updates from remote:
+    git pull
+
+
+CLONING REPOSITORIES
+--------------------
+Clone any GitHub repo:
+    git clone <URL>
+
+Move into the cloned repo:
+    cd <foldername>
+
+
+EDITING LAST COMMIT
+-------------------
+Change last commit message:
+    git commit --amend -m "<new message>"
+
+Add forgotten files to previous commit:
+    git add .
+    git commit --amend --no-edit
+
+
+RESETTING & FIXING MISTAKES
+---------------------------
+Unstage a file:
+    git restore --staged <filename>
+
+Discard changes in a file:
+    git restore <filename>
+
+Undo last commit but keep changes:
+    git reset --soft HEAD~1
+
+Undo last commit and delete changes:
+    git reset --hard HEAD~1
+
+
+GITIGNORE
+---------
+Common patterns:
+
+    __pycache__/
+    .pytest_cache/
+    *.pyc
+    *.log
+    .vscode/
+    env/
+
+
+TAGS & RELEASES
+---------------
+Create a tag:
+    git tag -a v1.0 -m "Initial release v1.0"
+
+Push a tag:
+    git push origin v1.0
+
+List tags:
+    git tag
+
+
+SUBMODULES
+----------
+Add a submodule:
+    git submodule add <URL>
+
+Update submodules:
+    git submodule update --remote
+
+
+HELP COMMANDS
+-------------
+General help:
+    git --help
+
+Help for a specific command:
+    git <command> --help
