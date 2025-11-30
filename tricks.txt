@@ -1,0 +1,93 @@
+PYTHON BUILT-IN FUNCTIONS (WITH ARGUMENTS + RETURNS)
+BASIC
+
+len(x)
+→ returns number of items in x
+sum(iterable)
+→ returns total of all numbers
+max(iterable)
+→ returns largest value
+min(iterable)
+→ returns smallest value
+sorted(iterable)
+→ returns new sorted list
+round(number, ndigits)
+→ returns rounded number
+abs(x)
+→ returns absolute value
+type(x)
+→ returns the type of x
+
+TYPE CONVERSION
+int(x)
+→ returns x converted to integer
+float(x)
+→ returns x converted to float
+str(x)
+→ returns x converted to string
+bool(x)
+→ returns True or False depending on x
+list(x)
+→ returns list version of x
+tuple(x)
+→ returns tuple version of x
+set(x)
+→ returns set version of x
+
+ITERABLE HELPERS
+
+range(stop)
+range(start, stop)
+range(start, stop, step)
+→ returns a range object (sequence of numbers)
+
+enumerate(iterable)
+→ returns (index, item) pairs
+
+zip(a, b, ...)
+→ returns tuples pairing elements from each iterable
+
+map(function, iterable)
+→ returns an iterator after applying function to each item
+
+filter(function, iterable)
+→ returns an iterator with only items where function(item) is True
+
+DICTIONARY FUNCTIONS
+
+dict.get(key, default)
+→ returns dict[key] if exists, else default
+dict.keys()
+→ returns list-like view of keys
+dict.values()
+→ returns list-like view of values
+dict.items()
+→ returns list-like view of (key, value) pairs
+
+INPUT / OUTPUT
+
+print(x)
+→ prints x to screen
+input()
+→ returns user input as string
+
+MATH (BUILT-IN)
+
+pow(x, y)
+→ returns x raised to the power y
+divmod(a, b)
+→ returns (a // b, a % b) as (quotient, remainder)
+
+UTILITIES
+
+all(iterable)
+→ returns True if all items are True
+any(iterable)
+→ returns True if at least one item is True
+reversed(iterable)
+→ returns reversed iterator
+
+FILE HANDLING
+
+open(filename, mode)
+→ returns file object (read/write depending on mode)
