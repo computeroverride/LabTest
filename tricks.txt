@@ -1,93 +1,205 @@
-PYTHON BUILT-IN FUNCTIONS (WITH ARGUMENTS + RETURNS)
-BASIC
+PYTHON BUILT-IN FUNCTIONS (EXPANDED WITH ARGUMENTS + RETURNS)
+============================================================
 
+BASIC
+-----
 len(x)
-→ returns number of items in x
+    → number of items in x
+
 sum(iterable)
-→ returns total of all numbers
+    → total of all numeric values
+
 max(iterable)
-→ returns largest value
+max(a, b, c, ...)
+    → largest value
+
 min(iterable)
-→ returns smallest value
-sorted(iterable)
-→ returns new sorted list
+min(a, b, c, ...)
+    → smallest value
+
+sorted(iterable, reverse=False)
+    → new sorted list (reverse=True for descending)
+
 round(number, ndigits)
-→ returns rounded number
+    → number rounded to ndigits decimal places
+
 abs(x)
-→ returns absolute value
+    → absolute value of x
+
 type(x)
-→ returns the type of x
+    → type of x
+
+id(x)
+    → unique memory identifier of object
+
+print(value, ...)
+    → print to console
+
+input(prompt)
+    → user input as string
+
 
 TYPE CONVERSION
+---------------
 int(x)
-→ returns x converted to integer
 float(x)
-→ returns x converted to float
 str(x)
-→ returns x converted to string
 bool(x)
-→ returns True or False depending on x
 list(x)
-→ returns list version of x
 tuple(x)
-→ returns tuple version of x
 set(x)
-→ returns set version of x
+    → convert x into specified type
+
+dict(iterable or pairs)
+    → convert to dictionary
+
+
+MATH (BUILT-IN)
+---------------
+pow(x, y)
+    → x**y
+
+divmod(a, b)
+    → (a // b, a % b)
+
+round(x, n)
+    → rounded x to n decimals
+
 
 ITERABLE HELPERS
-
+----------------
 range(stop)
 range(start, stop)
 range(start, stop, step)
-→ returns a range object (sequence of numbers)
+    → range sequence
 
-enumerate(iterable)
-→ returns (index, item) pairs
+enumerate(iterable, start=0)
+    → (index, item) pairs
 
 zip(a, b, ...)
-→ returns tuples pairing elements from each iterable
+    → pair elements from each iterable
 
 map(function, iterable)
-→ returns an iterator after applying function to each item
+    → apply function to each element
 
 filter(function, iterable)
-→ returns an iterator with only items where function(item) is True
+    → keep elements where function(item) is True
 
-DICTIONARY FUNCTIONS
-
-dict.get(key, default)
-→ returns dict[key] if exists, else default
-dict.keys()
-→ returns list-like view of keys
-dict.values()
-→ returns list-like view of values
-dict.items()
-→ returns list-like view of (key, value) pairs
-
-INPUT / OUTPUT
-
-print(x)
-→ prints x to screen
-input()
-→ returns user input as string
-
-MATH (BUILT-IN)
-
-pow(x, y)
-→ returns x raised to the power y
-divmod(a, b)
-→ returns (a // b, a % b) as (quotient, remainder)
-
-UTILITIES
+reversed(iterable)
+    → reversed iterator
 
 all(iterable)
-→ returns True if all items are True
+    → True if all items are True
+
 any(iterable)
-→ returns True if at least one item is True
-reversed(iterable)
-→ returns reversed iterator
+    → True if at least one item is True
+
+
+LIST METHODS
+------------
+list.append(item)
+    → add item to end
+
+list.extend(iterable)
+    → add all items from iterable
+
+list.insert(index, item)
+    → insert at index
+
+list.remove(item)
+    → remove first occurrence
+
+list.pop(index)
+list.pop()
+    → remove and return item
+
+list.clear()
+    → remove all items
+
+list.sort(reverse=False)
+    → sort list in-place
+
+list.count(value)
+    → number of times value appears
+
+list.index(value)
+    → first index of value
+
+list.copy()
+    → shallow copy of list
+
+
+DICTIONARY FUNCTIONS
+--------------------
+d[key]
+    → value (error if key missing)
+
+d.get(key, default=None)
+    → safe lookup
+
+d.keys()
+    → all keys
+
+d.values()
+    → all values
+
+d.items()
+    → (key, value) pairs
+
+d.update(other_dict)
+    → merge/update values
+
+d.pop(key)
+d.pop(key, default)
+    → remove and return value
+
+d.popitem()
+    → remove last (key, value)
+
+d.setdefault(key, default)
+    → return value; insert default if missing
+
+d.clear()
+    → remove all items
+
+d.copy()
+    → shallow copy
+
+
+STRING FUNCTIONS
+----------------
+str.lower()
+str.upper()
+    → change case
+
+str.strip()
+    → remove leading/trailing whitespace
+
+str.split(separator)
+    → split into list
+
+str.join(iterable)
+    → join items into string
+
+str.replace(old, new)
+    → replace substring
+
+str.find(substring)
+    → index of substring (-1 if not found)
+
 
 FILE HANDLING
-
+-------------
 open(filename, mode)
-→ returns file object (read/write depending on mode)
+    → return file object (read/write)
+
+file.read()
+file.readline()
+file.readlines()
+    → read text
+
+file.write(text)
+    → write text
+
+file.close()
+    → close file

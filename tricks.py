@@ -13,3 +13,7 @@ statistics.median(numbers)      # middle value
 statistics.mode(numbers)        # most common value
 statistics.stdev(numbers)       # standard deviation
 ######################################################################
+my_dict = {"apple": 3, "orange": 5}
+
+for key in my_dict:
+    print(my_dict[key])

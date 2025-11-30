@@ -1,0 +1,104 @@
+PYTHON DICTIONARY CHEAT SHEET
+(DevOps Unit Testing Lab Focus)
+BASIC CREATION
+
+price = {"apple": 1.20, "pear": 0.90}
+qty = {"apple": 5, "pear": 10}
+
+ACCESSING VALUES (IMPORTANT FOR UNIT TESTS)
+
+price["apple"]
+→ returns value
+(crashes if key missing)
+
+price.get("banana")
+→ returns None
+
+price.get("banana", 0)
+→ returns 0 instead of crashing
+
+USE WHEN TEST WANTS SAFE LOOKUP.
+
+UPDATING / ADDING VALUES
+
+price["apple"] = 5.50
+→ update existing
+
+price["orange"] = 1.40
+→ add new key
+
+price.update({"pear": 1.00})
+→ update multiple keys at once
+
+price.update(other_dict)
+→ merge dictionaries
+
+DELETING ENTRIES
+
+price.pop("apple")
+→ returns the value removed
+
+price.pop("banana", 0)
+→ returns 0 if key missing (no crash)
+
+del price["pear"]
+→ deletes key (crashes if missing)
+
+price.clear()
+→ remove all entries
+
+CHECKING CONTENT
+
+"apple" in price
+→ True
+
+"banana" not in qty
+→ True
+
+len(price)
+→ number of keys
+
+LOOPING (VERY COMMON IN LABS)
+
+for key in price:
+→ loops through keys
+
+for value in price.values():
+→ loops through values
+
+for key, value in price.items():
+→ loops through key-value pairs
+
+COMMON PATTERNS USED IN LAB 3 QUESTIONS
+1. Summing cost of fruits
+
+for fruit in qty:
+total += price[fruit] * qty[fruit]
+
+2. Return instead of printing (required for pytest)
+
+def cost_of_fruit(fruit, qty):
+return price[fruit] * qty
+
+3. Safe lookup without crashing
+
+cost = price.get("durian", 0)
+
+4. Return None if key missing (pytest checks this)
+
+def get_price(fruit):
+return price.get(fruit)
+
+5. Loop through keys then access values
+
+for f in price.keys():
+print(f, price[f])
+
+USEFUL METHODS SUMMARY
+price.keys() → dict_keys of all keys
+price.values() → dict_values of values
+price.items() → key/value pairs
+price.get(k, d) → safe lookup
+price.update(d2) → merge/update keys
+price.pop(k) → remove and return value
+price.pop(k, d) → return d if missing
