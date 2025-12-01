@@ -4,6 +4,17 @@ markdown_tricks: |
   # Header 1
   ## Header 2
   ### Need to make sure python code has its return statements
+  for i in range(n):
+    for j in range(n-i-1):
+        ...
+return arr_result
+
+if type(s) is not int:
+    return 2
+
+    
+<img width="1014" height="547" alt="image" src="https://github.com/user-attachments/assets/73cf79b1-86c6-41f5-9932-0d615db6969c" />
+
 
   This is **bold text**
 
